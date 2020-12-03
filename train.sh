@@ -26,7 +26,7 @@ ARGS=(
 	--model_type ${MODEL}
 	--fp16
 	--fp16_opt_level O1
-	--output_dir output5
+	--output_dir output
 	--run_name ${WANDB_NAME}
 	--do_train
 	--train_data_file ${TRAIN_DIR}
