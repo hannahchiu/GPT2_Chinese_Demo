@@ -1,43 +1,37 @@
+<!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet"
-          href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
-          integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chinese GPT-2 Demo</title>
 </head>
 <body>
 
-<div class="container" style="width:747px;height:70px">
-    <div class="header">
-        <a class="list-group-item" style="padding-bottom:0;;padding-left:150px">
-            <i class="material-icons" style="font-size: 30px;margin-right:0">create</i>
-            <h3 class="list-group-item">中文GPT-2 </h3>
-        </a>
+
+<div class="bg-white border-bottom shadow-sm mb-3">
+    <div class="container d-flex flex-column flex-md-row align-items-center py-3">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Chinese GPT-2 Demo</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="./">新聞</a>
+            <a class="p-2 text-dark" href="./three">三國演義</a>
+        </nav>
     </div>
 </div>
 
-<div class="container" style="width:747px;height:200px">
-    <form action="./" method="post" enctype="multipart/form-data">
-        <div class="column">
-            <textarea name="news"
-                      style="width:550px;height:600px;margin-right:15px;font-size:20px;line-height:25px;padding:10px"
-                      placeholder="請輸入中文"
-            >{{res}}</textarea>
-
-            <div style="margin-left:0px;margin-top:15px;padding-left:190px">
-                <button type="submit" class="btn btn-raised btn-info pull-xs-right" style="background-color: #0288d1 ">
-                    續寫
-                </button>
-
-                <a href="./" class="btn btn-raised btn-info pull-xs-right" style="background-color: #0288d1 ">
-                    RESET
-                </a>
+<section class="bg-white jumbotron text-center">
+    <div class="container">
+        <h5>Write something...</h5>
+        <form action="./" method="post">
+        <textarea name="news" class="form-control" rows="20" placeholder="請輸入中文"
+        >{{res}}</textarea>
+            <div>
+                <button type="submit" class="btn btn-primary my-2">WRITE</button>
+                <a href="./" class="btn btn-secondary my-2">RESET</a>
             </div>
-
-        </div>
-    </form>
-</div>
-
+        </form>
+    </div>
+</section>
 </body>
 </html>

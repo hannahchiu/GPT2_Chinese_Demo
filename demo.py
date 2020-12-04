@@ -32,7 +32,19 @@ def upload():
     return render_template("index.html", res=output)
 
 
+@app.route('/three')
+def index2():
+    return render_template("index.html", res="話說天下大勢，分久必合，合久必分。")
+
+
+@app.route('/three', methods=['POST'])
+def upload2():
+    input_text = request.values['news']
+    output = "三國演義"
+    return render_template("index.html", res=output)
+
+
 if __name__ == '__main__':
     app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.jinja_env.auto_reload = True
-    app.run(host='0.0.0.0', port=8000, threaded=True, debug=True)
+    app.run(host='0.0.0.0', port=9000, threaded=True, debug=True)
