@@ -58,4 +58,4 @@ def upload2():
 if __name__ == '__main__':
     app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.jinja_env.auto_reload = True
-    app.run(host='0.0.0.0', port=8000, threaded=True, debug=True)
+    app.run(host='0.0.0.0', port=9203, threaded=True, debug=True)
